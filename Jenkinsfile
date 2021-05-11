@@ -8,7 +8,7 @@ pipeline {
         echo 'Compile...'
      }
    }
-    stage('Unit Test') {
+ /*   stage('Unit Test') {
      steps {
         sh(script: 'mvn test')
 	sh(script: 'mvn package')
@@ -16,8 +16,8 @@ pipeline {
 
         echo 'Unit Test...'
      }
-   } 
-    stage('Code Quality') {
+   } */
+  /*  stage('Code Quality') {
      steps {	    	    
            withSonarQubeEnv('sonarqube') {
 		     sh """ 		        
@@ -30,16 +30,16 @@ pipeline {
         
         echo 'Code Quality...'
 	}
-   }
-    stage('Artifact Push') {
+   } */
+ /*   stage('Artifact Push') {
      steps {	          
 	   //  sh(script: 'mvn  -version')
              sh(script: 'mvn   deploy')
 	     
         echo 'Artifact Push...'
      }
-   }
-   stage('Deploy') {
+   } */
+/*   stage('Deploy') {
 	      steps{
 		      
 		   script {
@@ -51,30 +51,30 @@ pipeline {
 		   }                 
 	      } 
         }
-   }
-    stage('Smoke Test') {
+   } */
+  /*  stage('Smoke Test') {
      steps {       			       
 	     sh 'curl http://65.2.108.33:8080'
 	   //  sh 'curl -u admin:devops123 -d "script=println InetAddress.localHost.hostAddress" http://65.2.108.33:8080'
 	    
         echo 'Smoke Test...'
 		     }
-   }
-    stage('Functional Test') {
+   } */
+   /* stage('Functional Test') {
      steps {	     
 				    			
-				  //    step([$class : 'Publisher', reportFilenamePattern : '**/testng-results.xml'])  
+				    
 	           
 			
         echo 'Functional Test...'
      }
-   }
-   stage('Email Notification') {
+   } */
+  /* stage('Email Notification') {
      steps {
 	    // mail bcc: '', body: '''Hi all,
               //The pipeline run successfully.''', cc: '', from: '', replyTo: '', subject: 'Jenkins pipeline', to: 'hariharasudhan9894@gmail.com'
         echo 'Email Notification...'
      }
-   }
+   } */
   }
 }
