@@ -12,8 +12,8 @@ pipeline {
      steps {
         sh(script: 'mvn test')
 	//sh(script: 'mvn package')
-	   //  junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
-	     junit allowEmptyResults: true, testResults: 'src/test/java/hello/*.java'
+	     junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
+	   //  junit allowEmptyResults: true, testResults: 'src/test/java/hello/*.java'
 
 
 	// junit 'target/surefire-reports/*.xml'
