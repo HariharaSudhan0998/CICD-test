@@ -12,7 +12,10 @@ pipeline {
      steps {
         sh(script: 'mvn test')
 	//sh(script: 'mvn package')
-	     junit allowEmptyResults: true, testResults: 'build/test-results/test/*.xml'
+	   //  junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
+	     junit allowEmptyResults: true, testResults: 'src/test/java/hello/*.java'
+
+
 	// junit 'target/surefire-reports/*.xml'
 
         echo 'Unit Test...'
