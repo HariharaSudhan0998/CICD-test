@@ -8,7 +8,7 @@ pipeline {
         echo 'Compile...'
      }
    }
- /*   stage('Unit Test') {
+   stage('Unit Test') {
      steps {
         sh(script: 'mvn test')
 	sh(script: 'mvn package')
@@ -16,7 +16,7 @@ pipeline {
 
         echo 'Unit Test...'
      }
-   } */
+   } 
   /*  stage('Code Quality') {
      steps {	    	    
            withSonarQubeEnv('sonarqube') {
