@@ -8,7 +8,7 @@ public class HelloController {
     
     @RequestMapping("/")
     public String index() {
-        return " Welcome to Flogile Technologies all !";
+        return " Welcome to Flogile Technologies  !";
     }
     
 }
